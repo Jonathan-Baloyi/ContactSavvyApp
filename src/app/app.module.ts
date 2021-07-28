@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/core/navbar/navbar.component';
 import { FooterComponent } from './components/core/footer/footer.component';
 import { ContainerComponent } from './components/core/container/container.component';
 import { ContactsListComponent } from './components/core/contacts-list/contacts-list.component';
+import { AlphabetFilterPipe } from './utils/alphabet-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ContactsListComponent } from './components/core/contacts-list/contacts-
     NavbarComponent,
     FooterComponent,
     ContainerComponent,
-    ContactsListComponent
+    ContactsListComponent,
+    AlphabetFilterPipe
   ],
   imports: [
     BrowserModule,
