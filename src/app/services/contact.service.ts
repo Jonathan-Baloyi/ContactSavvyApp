@@ -8,42 +8,48 @@ export class ContactService {
 
   public getContacts(): Observable<IContact[]> {
     const user1: IContact = {
-      name: 'James Blue',
+      name: 'James',
+      surname: 'Blue',
       imageUrl: "assets/user1.jpg",
       email: "test@test.com",
       mobile: "072555555"
     };
 
     const user2: IContact = {
-      name: 'James Bail',
+      name: 'James',
+      surname: 'Bail',
       imageUrl: "assets/user2.jpg",
       email: "test@test.com",
       mobile: "072555555"
     };
 
     const user3: IContact = {
-      name: 'Aloe Green',
+      name: 'Aloe',
+      surname: 'Green',
       imageUrl: "assets/user3.jpg",
       email: "test@test.com",
       mobile: "072555555"
     };
 
     const user4: IContact = {
-      name: 'Liver benz',
+      name: 'Liver',
+      surname: 'Benz',
       imageUrl: "assets/user4.jpg",
       email: "test@test.com",
       mobile: "072555555"
     };
 
     const user5: IContact = {
-      name: 'Kulca bull',
+      name: 'Kulca',
+      surname: 'Bull',
       imageUrl: "assets/user5.jpg",
       email: "test@test.com",
       mobile: "072555555"
     };
 
     const user6: IContact = {
-      name: 'Kulca Bingo',
+      name: 'Kulca',
+      surname: 'Bingo',
       imageUrl: "assets/user1.jpg",
       email: "test@test.com",
       mobile: "072555555"

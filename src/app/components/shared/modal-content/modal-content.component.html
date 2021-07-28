@@ -1,0 +1,76 @@
+<span *ngIf="isSaveAction || isUpdateAction">
+  <form class="pl-3 pr-3 pt-3" [formGroup]="ngForm" (ngSubmit)="saveUpdateDeleteContact()">
+    <div class="modal-header">
+      <h4 class="modal-title">{{modalWrapper.action}} Contact</h4>
+      <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <span>
+        <div class="form-group">
+          <input type="text" formControlName="name" placeholder="Name" class="form-control"
+            [class.is-invalid]="f.name.invalid && f.name.touched" autofocus />
+
+          <div *ngIf="(f.name.invalid && f.name.touched) || f.name.dirty" class="invalid-feedback">
+            <div *ngIf="f.name.errors?.required">Name is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" formControlName="surname" placeholder="surname" class="form-control"
+            [class.is-invalid]="f.surname.invalid && f.surname.touched" autofocus />
+
+          <div *ngIf="(f.surname.invalid && f.surname.touched) || f.surname.dirty" class="invalid-feedback">
+            <div *ngIf="f.surname.errors?.required">surname is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" formControlName="mobile" placeholder="mobile" class="form-control"
+            [class.is-invalid]="f.mobile.invalid && f.mobile.touched" autofocus />
+
+          <div *ngIf="(f.mobile.invalid && f.mobile.touched) || f.mobile.dirty" class="invalid-feedback">
+            <div *ngIf="f.mobile.errors?.required">mobile is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" formControlName="email" placeholder="email" class="form-control"
+            [class.is-invalid]="f.email.invalid && f.email.touched" autofocus />
+
+          <div *ngIf="(f.email.invalid && f.email.touched) || f.email.dirty" class="invalid-feedback">
+            <div *ngIf="f.email.errors?.required">email is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" formControlName="address" placeholder="address" class="form-control"
+            [class.is-invalid]="f.address.invalid && f.address.touched" autofocus />
+
+          <div *ngIf="(f.address.invalid && f.address.touched) || f.address.dirty" class="invalid-feedback">
+            <div *ngIf="f.address.errors?.required">address is required</div>
+          </div>
+        </div>
+      </span>
+    </div>
+    <div class="modal-footer d-flex justify-content-center">
+      <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Cancel</button>
+      <button type="button" class="btn btn-outline-dark" [disabled]="!ngForm.valid">{{modalWrapper.action}}</button>
+    </div>
+  </form>
+</span>
+
+<span *ngIf="isDeleteAction">
+  <div class="modal-header">
+    <h4 class="modal-title">{{modalWrapper.action}} Contact</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <span>
+      <p class="text-center">Are you sure you want to delete this contact? </p>
+    </span>
+  </div>
+  <div class="modal-footer d-flex justify-content-center">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Cancel</button>
+    <button type="button" class="btn btn-outline-dark">{{modalWrapper.action}}</button>
+  </div>
+</span>

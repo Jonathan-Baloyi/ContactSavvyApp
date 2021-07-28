@@ -1,6 +1,10 @@
+import { IAddress } from './IAddress';
+
 export interface IContact {
   name: string;
-  imageUrl: string;
+  surname: string;
+  imageUrl?: string;
   mobile: string;
   email: string;
+  address?: IAddress;
 }
