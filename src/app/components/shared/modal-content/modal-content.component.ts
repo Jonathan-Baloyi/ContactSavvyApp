@@ -64,6 +64,7 @@ export class ModalContentComponent implements OnInit {
     }
 
     // To Do: Once the model is built, a contact is ready to be saved
+
   }
 
 }
